@@ -11,3 +11,10 @@ def visualize_sales(summary):
 
     if not item_names or not item_prices:
         raise ValueError("Items or prices list is empty. Unable to generate graph.")
+
+        Set up the bar chart
+    plt.figure(figsize=(10, 6))
+    plt.bar(item_names, item_prices, color='blue')
+    plt.xlabel('Items')
+    plt.ylabel('Prices (Currency)')
+    plt.title('Sales Summary')
