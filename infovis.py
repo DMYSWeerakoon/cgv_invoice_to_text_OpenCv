@@ -18,3 +18,12 @@ def visualize_sales(summary):
     plt.xlabel('Items')
     plt.ylabel('Prices (Currency)')
     plt.title('Sales Summary')
+
+    Adjust item labels to avoid overlap
+    plt.xticks(rotation=45, ha="right")
+
+    # Save the graph to a file
+    graph_folder = os.path.join(os.path.dirname(os.path.abspath(file)), "visualization")
+    os.makedirs(graph_folder, exist_ok=True)
+    plt.savefig(os.path.join(graph_folder, "sales_summary.png"))
+    plt.show()
